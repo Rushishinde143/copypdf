@@ -4,7 +4,7 @@ from PIL import Image, UnidentifiedImageError
 import io
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/upload": {"origins": "https://jpg2pdfconverter.netlify.app/"}})
 
 @app.route('/upload', methods=['POST'])
 def upload():
