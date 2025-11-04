@@ -11,7 +11,7 @@ document.getElementById('uploadForm').addEventListener('submit', async function(
     formData.append('layout', layout);
 
     try {
-        const response = await fetch('https://copypdf.onrender.com', {
+        const response = await fetch('https://copypdf.onrender.com/upload', {
             method: 'POST',
             body: formData
         });
